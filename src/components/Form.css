@@ -1,5 +1,7 @@
-main {
+form {
     padding: 36px;
+    min-width: 50%;
+    
 }
 
 
@@ -24,4 +26,8 @@ main {
     color: white;
     border: none;
     cursor: pointer;
+}
+main{
+    display: flex;
+    justify-content: center;
 }
