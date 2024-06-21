@@ -4,9 +4,9 @@ import Memes from '../memesData'
 
 
 function Form() {
-  let url
+  let [url, setUrl] = React.useState("")
   function getMemeImg(){
-    url =  (Memes.data.memes[Math.floor(Math.random()*100)].url)
+    setUrl(Memes.data.memes[Math.floor(Math.random()*100)].url)
   }
   return(
     <main>
@@ -27,9 +27,12 @@ function Form() {
                 >
                     Get a new meme image 🖼️
                 </button>
-                <p>{url}</p>
             </div>
+            <div className="img-con">
+                    <img src={url} className="meme-img"/>
+                </div>
         </main>
+        
   )
 }
 

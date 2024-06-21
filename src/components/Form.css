@@ -27,7 +27,12 @@
     border: none;
     cursor: pointer;
 }
-main{
+
+.meme-img{
+    width: 60%;
+}
+
+.img-con{
     display: flex;
     justify-content: center;
 }
