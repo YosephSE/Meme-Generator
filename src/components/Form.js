@@ -1,9 +1,16 @@
 import React from "react";
 import './Form.css'
+import Memes from '../memesData'
+
+
 function Form() {
+  let url
+  function getMemeImg(){
+    url =  (Memes.data.memes[Math.floor(Math.random()*100)].url)
+  }
   return(
     <main>
-            <form className="form">
+            <div className="form">
                 <input 
                     type="text"
                     placeholder="Top text"
@@ -16,10 +23,12 @@ function Form() {
                 />
                 <button 
                     className="form--button"
+                    onClick={getMemeImg}
                 >
-                    Get a new meme image 🖼
+                    Get a new meme image 🖼️
                 </button>
-            </form>
+                <p>{url}</p>
+            </div>
         </main>
   )
 }
